@@ -1,7 +1,7 @@
 import './App.css';
 
 
-const name = "shubham";
+const name = "Shubham";
 const date = new Date().getDate();
 const month = new Date().getMonth();
 const year = new Date().getFullYear();
@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <center><h1 className="h1">Hello {name} </h1></center>
-      <p className="h1">{`Today's Date:${date}/${month}/${year}`}</p>
-      <p className="h1">{`Today's Time: ${time}`}</p>
+      <p className="p">{`Today's Date:${date}/${month}/${year}`}</p>
+      <p className="p">{`Today's Time: ${time}`}</p>
     </>
   );
 }
