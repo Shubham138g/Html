@@ -1,10 +1,10 @@
-h1 {
+.h1 {
   color: red;
   font-family: "Tangerine", serif;
   font-size: 50px;
 }
-p {
+.p {
   color: red;
   font-family: "Borel", cursive;
-  font-size: 20px;
+  font-size: 22px;
 }
