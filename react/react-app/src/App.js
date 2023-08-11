@@ -6,19 +6,23 @@ const date = new Date().toLocaleDateString();
 const time = new Date().toLocaleTimeString();
 
 
-let currentDate = new Date();
+let currentDate = new Date(2023,8,11,11);
 currentDate = currentDate.getHours();
 let greet = '';
 
+const cssStyle={};
 
 if (currentDate > 1 && currentDate < 12) {
-  greet = 'GOod Morning';
+  greet = 'Good Morning';
+  cssStyle.color='yellow';
 }
 else if (currentDate > 12 && currentDate < 19) {
   greet = 'Good Afternoon';
+  cssStyle.color='orange';
 }
 else if (currentDate > 19 && currentDate < 24) {
   greet = 'Good night';
+  cssStyle.color='red';
 }
 
 
@@ -28,7 +32,7 @@ function App() {
       <center><h1 className="h1">Hello {name} </h1></center>
       <p className="p">{`Today's Date:${date}`}</p>
       <p className="p">{`Today's Time: ${time}`}</p>
-      <h1> Hello sir,{greet}</h1>
+      <h1> Hello sir,<span style={cssStyle}>{greet}</span></h1>
     </>
   );
 }
