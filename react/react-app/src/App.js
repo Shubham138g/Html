@@ -32,6 +32,8 @@ function App() {
       <center><h1 className="h1">Hello {name} </h1></center>
       <p className="p">{`Today's Date:${date}`}</p>
       <p className="p">{`Today's Time: ${time}`}</p>
+
+      
       <h1 className="h1"> Hello sir,<span style={cssStyle}>{greet}</span></h1>
     </>
   );
