@@ -1,5 +1,5 @@
 import './App.css';
-
+import Heading from './Component/Heading';
 
 const name = "Shubham";
 const date = new Date().toLocaleDateString();
@@ -33,6 +33,7 @@ function App() {
       <p className="p">{`Today's Date:${date}`}</p>
       <p className="p">{`Today's Time: ${time}`}</p>
       <p className="p">{`Today's Time: ${time}`}</p>
+      <Heading />
 
       
       <h1 className="h1"> Hello sir,<span style={cssStyle}>{greet}</span></h1>
