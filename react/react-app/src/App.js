@@ -1,19 +1,20 @@
 import './App.css';
-// import Heading from './Component/Heading';
-import Greet from './Component/Greet';
-import Props from './Component/Props';
-// import Date from './Component/Date';
-
-
+// import Greet from './Component/Greet';
+// import Props from './Component/Props';
+import CardExample from './Component/CardExample';
 
 
 
 function App() {
-  let greeting="kaise ho";
+  // let greeting="kaise ho";
   return (
     <>
-      <Greet />
-    <Props  message={greeting} />
+      {/* <Greet /> */}
+    {/* <Props  message={greeting} /> */}
+    <CardExample title={"shubham gupta"} text={"This is a sample card with some example content."} />
+    <CardExample title={"Card"} text={"This is a sample card with some example content."} />
+    <CardExample title={"Card Text"} text={"This is a sample card with some example content."} />
+
     </>
   );
 }
