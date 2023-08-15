@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Greet />
-    <Props  message={greeting}/>
+    <Props  message={greeting} />
     </>
   );
 }
