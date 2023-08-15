@@ -20,10 +20,16 @@ export default function Greet() {
   }
   return (
     <>
-      <h1 className="h1">
+    <div className="header">
+<div className="head">
+    <h1 className="h1">
         {" "}
         Hello sir,<span style={cssStyle}>{greet}</span>
       </h1>
+    </div>
+    </div>
+    
+     
     </>
   );
 }
