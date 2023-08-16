@@ -5,16 +5,25 @@ import CardExample from './Component/CardExample';
 import Sdata from './Sdata';
 
 
+
+
 function App() {
   // let greeting="kaise ho";
   return (
     <>
       {/* <Greet /> */}
-    {/* <Props  message={greeting} /> */}
-    <CardExample title={"shubham gupta"} text={"This is a sample card with some example content."} />
-    <CardExample title={"Card"} text={"This is a sample card with some example content."} />
-    <CardExample title={"Card Text"} text={"This is a sample card with some example content."} />
-    <CardExample />
+      {/* <Props  message={greeting} /> */}
+
+      {Sdata.map((val) => {
+        return (
+          <CardExample
+          key={val.id}
+            imgsrc={val.imgsrc}
+            Sname={val.Sname}
+            title={val.title}
+          />
+        );
+      })}
 
     </>
   );
