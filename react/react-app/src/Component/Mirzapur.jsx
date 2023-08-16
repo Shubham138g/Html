@@ -5,11 +5,11 @@ import Sdata from '../Sdata';
 export default function Mirzapur() {
   return (
     <>
-      <CardExample
-            key={Sdata[2].id}
-            imgsrc={Sdata[2].imgsrc}
-            Sname={Sdata[2].Sname}
-            title={Sdata[2].title}
+        <CardExample
+            key={Sdata[0].id}
+            imgsrc={Sdata[0].imgsrc}
+            Sname={Sdata[0].Sname}
+            title={Sdata[0].title}
           />
     </>
   );

@@ -3,13 +3,19 @@ import './App.css';
 // import Props from './Component/Props';
 import CardExample from './Component/CardExample';
 import Sdata from './Sdata';
+import Mirzapur from './Component/Mirzapur';
+import Cartel from './Component/Cartel';
 
-const favseries="mirzapur"
+
+
+const favseries="Cartel"
 const FavS = () => {
-  if(favseries==="mirzapur"){
-    
+  if(favseries==="Cartel"){
+    return <Cartel />
   }
-
+else{
+  <Mirzapur />
+}
 }
 
 function App() {
@@ -29,8 +35,8 @@ function App() {
           />
         );
       })} */}
-      <FavS/>
 
+      <FavS/>
     </>
   );
 }
