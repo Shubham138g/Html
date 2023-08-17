@@ -58,6 +58,9 @@ function App() {
     setname('back ho gya 😁');
   }
 
+  const inputEvent=(event)=>{
+    console.log(event.target.value);
+  }
 
   // let greeting="kaise ho";
   return (
@@ -98,7 +101,11 @@ function App() {
       <div style={{ backgroundColor: bg }}>
         <h1>CHANING BGCOLOR</h1>
         <button className='button' onClick={bgChange} onDoubleClick={bgBack}>{name}</button>
-
+      </div>
+      <div className='state'>
+        <h1>Hello</h1>
+        <input type="text" placeholder='Enter your name' onChange={inputEvent}/><br/>
+        <button className='button' >Submit</button>
       </div>
 
     </>
