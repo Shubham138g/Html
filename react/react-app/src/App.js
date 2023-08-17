@@ -45,10 +45,17 @@ function App() {
 
   let bgcolor = "red";
   const [bg, setbg] = useState(bgcolor);
+   const [name, setname] = useState('click me');
+
   const bgChange = () => {
     let updatebg = "yellow";
     setbg(updatebg)
-
+    setname('how are you! 😘')
+  }
+  const bgBack=()=>{
+    bgcolor='red';
+    setbg(bgcolor);
+    setname('back ho gya 😁');
   }
 
 
@@ -90,7 +97,7 @@ function App() {
       </div>
       <div style={{ backgroundColor: bg }}>
         <h1>CHANING BGCOLOR</h1>
-        <button className='button' onClick={bgChange}>click me</button>
+        <button className='button' onClick={bgChange} onDoubleClick={bgBack}>{name}</button>
 
       </div>
 
