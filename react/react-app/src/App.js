@@ -45,29 +45,38 @@ function App() {
 
   let bgcolor = "red";
   const [bg, setbg] = useState(bgcolor);
-   const [name, setname] = useState('click me');
+  const [name, setname] = useState('click me');
 
   const bgChange = () => {
     let updatebg = "yellow";
     setbg(updatebg)
     setname('how are you! 😘')
   }
-  const bgBack=()=>{
-    bgcolor='red';
+  const bgBack = () => {
+    bgcolor = 'red';
     setbg(bgcolor);
     setname('back ho gya 😁');
   }
 
- const [formName, setformName] = useState("");
- const [myName, setmyName] = useState();
+  const [formName, setformName] = useState("");
+  const [myName, setmyName] = useState();
 
- const onsubmit=()=>{
-  setmyName(formName)
- }
+   const [lastName, setlastName] = useState("");
+    const [lName, setlName] = useState();
 
-  const inputEvent=(event)=>{
-    console.log(event.target.value);
+  const onsubmits = (event) => {
+    event.preventDefault();
+    setmyName(formName)
+    setlName(lastName)
+  }
+
+  const inputEvent = (event) => {
+    // console.log(event.target.value);
     setformName(event.target.value);
+  }
+  const inputEventTwo = (event) => {
+    // console.log(event.target.value);
+    setlastName(event.target.value);
   }
 
   // let greeting="kaise ho";
@@ -110,15 +119,21 @@ function App() {
         <h1>CHANING BGCOLOR</h1>
         <button className='button' onClick={bgChange} onDoubleClick={bgBack}>{name}</button>
       </div>
-      <div className='state'>
-        <h1>Hello {myName}</h1>
-        <input type="text" 
-        placeholder='Enter your name' 
-        onChange={inputEvent}
-        value={formName}/><br/>
-        <button className='button' onClick={onsubmit} >Submit</button>
-      </div>
+      <form  onSubmit={onsubmits}>
 
+        <div className='state'>
+          <h1>Hello {myName} {lName}</h1>
+          <input type="text"
+            placeholder='Enter your name'
+            onChange={inputEvent}
+            value={formName} /><br />
+          <input type="text"
+            placeholder='Enter your name'
+            onChange={inputEventTwo}
+            value={lastName} /><br />
+          <button  type='submit' className='button'>Submit</button>
+        </div>
+      </form>
     </>
   );
 }
