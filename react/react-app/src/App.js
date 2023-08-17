@@ -23,11 +23,25 @@ const favseries = "cartel";
 
 function App() {
   const [count, setCount] = useState(0);
-
   const IncNum = () => {
     setCount(count + 1);
-
   }
+
+  let newTime = new Date().toLocaleTimeString();
+  const [time, settime] = useState(newTime);
+  const GetTime = () => {
+    let newTime = new Date().toLocaleTimeString();
+    settime(newTime);
+  }
+
+  let dClock = new Date().toLocaleTimeString();
+  const [digitalC, setdigitalC] = useState(dClock);
+
+  const DigitalClock = () => {
+     dClock = new Date().toLocaleTimeString();
+     setdigitalC(dClock);
+    }
+    setInterval(DigitalClock,1000);
 
   // let greeting="kaise ho";
   return (
@@ -55,8 +69,16 @@ function App() {
         <button className='button' onClick={IncNum}>CLICK ME</button>
       </div><br />
       <div className="state">
-        <h1>time</h1>
-        <button className='button'>GTE TIME</button>
+        <h1>
+          {time}
+        </h1>
+        <button className='button' onClick={GetTime}>GTE TIME</button>
+      </div>
+      <div className="state">
+        <h1>
+          {digitalC}
+        </h1>
+        {/* <button className='button' onClick={DigitalClock}>DIGITAL CLOCK</button> */}
       </div>
 
     </>
