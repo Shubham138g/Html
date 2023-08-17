@@ -58,8 +58,16 @@ function App() {
     setname('back ho gya 😁');
   }
 
+ const [formName, setformName] = useState("");
+ const [myName, setmyName] = useState();
+
+ const onsubmit=()=>{
+  setmyName(formName)
+ }
+
   const inputEvent=(event)=>{
     console.log(event.target.value);
+    setformName(event.target.value);
   }
 
   // let greeting="kaise ho";
@@ -103,9 +111,12 @@ function App() {
         <button className='button' onClick={bgChange} onDoubleClick={bgBack}>{name}</button>
       </div>
       <div className='state'>
-        <h1>Hello</h1>
-        <input type="text" placeholder='Enter your name' onChange={inputEvent}/><br/>
-        <button className='button' >Submit</button>
+        <h1>Hello {myName}</h1>
+        <input type="text" 
+        placeholder='Enter your name' 
+        onChange={inputEvent}
+        value={formName}/><br/>
+        <button className='button' onClick={onsubmit} >Submit</button>
       </div>
 
     </>
