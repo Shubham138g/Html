@@ -38,10 +38,19 @@ function App() {
   const [digitalC, setdigitalC] = useState(dClock);
 
   const DigitalClock = () => {
-     dClock = new Date().toLocaleTimeString();
-     setdigitalC(dClock);
-    }
-    setInterval(DigitalClock,1000);
+    dClock = new Date().toLocaleTimeString();
+    setdigitalC(dClock);
+  }
+  setInterval(DigitalClock, 1000);
+
+  let bgcolor = "red";
+  const [bg, setbg] = useState(bgcolor);
+  const bgChange = () => {
+    let updatebg = "yellow";
+    setbg(updatebg)
+
+  }
+
 
   // let greeting="kaise ho";
   return (
@@ -72,17 +81,20 @@ function App() {
         <h1>
           {time}
         </h1>
-        <button className='button' onClick={GetTime}>GTE TIME</button>
-      </div>
+        <button className='button' onClick={GetTime}>GET TIME </button>
+      </div><br />
       <div className="state">
         <h1>
           {digitalC}
         </h1>
-        {/* <button className='button' onClick={DigitalClock}>DIGITAL CLOCK</button> */}
+      </div>
+      <div style={{ backgroundColor: bg }}>
+        <h1>CHANING BGCOLOR</h1>
+        <button className='button' onClick={bgChange}>click me</button>
+
       </div>
 
     </>
   );
 }
-
 export default App;
