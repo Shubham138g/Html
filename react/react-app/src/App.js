@@ -58,26 +58,49 @@ function App() {
     setname('back ho gya 😁');
   }
 
-  const [formName, setformName] = useState("");
-  const [myName, setmyName] = useState();
+  const [fullName, setfullName] = useState({
+    fName: '',
+    lName: '',
+  });
+  // const [myName, setmyName] = useState();
 
-   const [lastName, setlastName] = useState("");
-    const [lName, setlName] = useState();
-
-  const onsubmits = (event) => {
-    event.preventDefault();
-    setmyName(formName)
-    setlName(lastName)
-  }
+  //  const [lastName, setlastName] = useState("");
+  //   const [lName, setlName] = useState();
 
   const inputEvent = (event) => {
     // console.log(event.target.value);
-    setformName(event.target.value);
+    // console.log(event.target.name);
+
+    const value = event.target.value;
+    const name = event.target.name;
+
+    setfullName((preValue) => {
+      // console.log(preValue);
+      if(name==='fName'){
+        return{
+          fName: value,
+          lName: preValue.lName,
+        }
+      }
+      else if(name==='lName'){
+        return{
+          fName: preValue.fName,
+          lName: value,
+        }
+      }
+    })
   }
-  const inputEventTwo = (event) => {
-    // console.log(event.target.value);
-    setlastName(event.target.value);
+
+  const onsubmits = (event) => {
+    event.preventDefault();
+    // setmyName(formName)
+    // setlName(lastName)
   }
+
+
+  // const inputEventTwo = (event) => {
+  //   setlastName(event.target.value);
+  // }
 
   // let greeting="kaise ho";
   return (
@@ -119,19 +142,23 @@ function App() {
         <h1>CHANING BGCOLOR</h1>
         <button className='button' onClick={bgChange} onDoubleClick={bgBack}>{name}</button>
       </div>
-      <form  onSubmit={onsubmits}>
+      <form onSubmit={onsubmits}>
 
         <div className='state'>
-          <h1>Hello {myName} {lName}</h1>
+          <h1>Hello {fullName.fName} {fullName.lName}</h1>
           <input type="text"
             placeholder='Enter your name'
             onChange={inputEvent}
-            value={formName} /><br />
+            name='fName'
+          value={fullName.fName} 
+          /><br />
+
           <input type="text"
             placeholder='Enter your name'
-            onChange={inputEventTwo}
-            value={lastName} /><br />
-          <button  type='submit' className='button'>Submit</button>
+            onChange={inputEvent}
+            name='lName'
+            value={fullName.lName} /><br />
+          <button type='submit' className='button'>Submit</button>
         </div>
       </form>
     </>
