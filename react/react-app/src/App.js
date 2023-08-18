@@ -61,6 +61,8 @@ function App() {
   const [fullName, setfullName] = useState({
     fName: '',
     lName: '',
+    email: '',
+    phone: '',
   });
   // const [myName, setmyName] = useState();
 
@@ -71,21 +73,42 @@ function App() {
     // console.log(event.target.value);
     // console.log(event.target.name);
 
-    const value = event.target.value;
-    const name = event.target.name;
+    // const value = event.target.value;
+    // const name = event.target.name;
+    const { value, name } = event.target;
 
     setfullName((preValue) => {
-      // console.log(preValue);
-      if(name==='fName'){
-        return{
+      console.log(preValue);
+      if (name === 'fName') {
+        return {
           fName: value,
           lName: preValue.lName,
+          email: preValue.email,
+          phone: preValue.phone
         }
       }
-      else if(name==='lName'){
-        return{
+      else if (name === 'lName') {
+        return {
           fName: preValue.fName,
           lName: value,
+          email: preValue.email,
+          phone: preValue.phone,
+        }
+      }
+      else if (name === 'email') {
+        return {
+          fName: preValue.fName,
+          lName: preValue.lName,
+          email: value,
+          phone: preValue.phone,
+        }
+      }
+      else if (name === 'phone') {
+        return {
+          fName: preValue.fName,
+          lName: preValue.lName,
+          email: preValue.email,
+          phone: value,
         }
       }
     })
@@ -93,6 +116,7 @@ function App() {
 
   const onsubmits = (event) => {
     event.preventDefault();
+    alert("form submitted");
     // setmyName(formName)
     // setlName(lastName)
   }
@@ -146,18 +170,29 @@ function App() {
 
         <div className='state'>
           <h1>Hello {fullName.fName} {fullName.lName}</h1>
+          <h4>{fullName.email} {fullName.phone}</h4>
           <input type="text"
             placeholder='Enter your name'
             onChange={inputEvent}
             name='fName'
-          value={fullName.fName} 
+            value={fullName.fName}
           /><br />
 
           <input type="text"
-            placeholder='Enter your name'
+            placeholder='Enter your lName'
             onChange={inputEvent}
             name='lName'
             value={fullName.lName} /><br />
+          <input type="email"
+            placeholder='Enter your email'
+            onChange={inputEvent}
+            name='email'
+            value={fullName.email} /><br />
+          <input type="text"
+            placeholder='Enter your phone no.'
+            onChange={inputEvent}
+            name='phone'
+            value={fullName.phone} /><br />
           <button type='submit' className='button'>Submit</button>
         </div>
       </form>
