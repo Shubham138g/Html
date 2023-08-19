@@ -79,38 +79,42 @@ function App() {
 
     setfullName((preValue) => {
       console.log(preValue);
-      if (name === 'fName') {
-        return {
-          fName: value,
-          lName: preValue.lName,
-          email: preValue.email,
-          phone: preValue.phone
-        }
+      return {
+        ...preValue,
+        [name]: value,
       }
-      else if (name === 'lName') {
-        return {
-          fName: preValue.fName,
-          lName: value,
-          email: preValue.email,
-          phone: preValue.phone,
-        }
-      }
-      else if (name === 'email') {
-        return {
-          fName: preValue.fName,
-          lName: preValue.lName,
-          email: value,
-          phone: preValue.phone,
-        }
-      }
-      else if (name === 'phone') {
-        return {
-          fName: preValue.fName,
-          lName: preValue.lName,
-          email: preValue.email,
-          phone: value,
-        }
-      }
+      // if (name === 'fName') {
+      //   return {
+      //     fName: value,
+      //     lName: preValue.lName,
+      //     email: preValue.email,
+      //     phone: preValue.phone
+      //   }
+      // }
+      // else if (name === 'lName') {
+      //   return {
+      //     fName: preValue.fName,
+      //     lName: value,
+      //     email: preValue.email,
+      //     phone: preValue.phone,
+      //   }
+      // }
+      // else if (name === 'email') {
+      //   return {
+      //     fName: preValue.fName,
+      //     lName: preValue.lName,
+      //     email: value,
+      //     phone: preValue.phone,
+      //   }
+      // }
+      // else if (name === 'phone') {
+      //   return {
+      //     fName: preValue.fName,
+      //     lName: preValue.lName,
+      //     email: preValue.email,
+      //     phone: value,
+      //   }
+      // }
     })
   }
 
@@ -163,7 +167,7 @@ function App() {
         </h1>
       </div>
       <div style={{ backgroundColor: bg }}>
-        <h1>CHANING BGCOLOR</h1>
+        <h1>CHANGING BGCOLOR</h1>
         <button className='button' onClick={bgChange} onDoubleClick={bgBack}>{name}</button>
       </div>
       <form onSubmit={onsubmits}>
