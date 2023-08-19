@@ -23,6 +23,13 @@
   box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
 }
+.inc_dec_div{
+  width: 25%;
+  height: 50vh;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
 
 h1 {
   color: white;
@@ -82,7 +89,7 @@ ol li {
 .todo_style {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
@@ -101,4 +108,18 @@ ol li {
 
 .todo_style .fa-times:hover .list_style{
   color:red
+}
+
+.btn{
+  display: flex;
+  justify-content: space-around;
+}
+
+.inc_dec_btn{
+  width: 100px;
+  height: 100px;
+  border-radius: 0px;
+  margin: auto;
+  margin-right: 5px;
+  font-size: 15px;
 }
