@@ -22,11 +22,11 @@ export default function IncDec() {
         <div className="inc_dec_div">
           <h1>{num}</h1>
           <div className="btn">
-            <Button className="inc_dec_btn" onClick={incNum}>
+            <Button variant="outlined" className="inc_dec_btn inc_btn" onClick={incNum}>
               <AddIcon />
             </Button>
            
-            <Button className="inc_dec_btn" onClick={decNum}>
+            <Button variant="outlined" className="inc_dec_btn dec_btn" onClick={decNum}>
               <RemoveIcon />
             </Button>
           </div>
