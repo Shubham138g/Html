@@ -123,3 +123,6 @@ ol li {
   margin-right: 5px;
   font-size: 15px;
 }
+.inc_dec_btn:hover{
+color: red;
+}

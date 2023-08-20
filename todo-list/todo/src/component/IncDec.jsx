@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
+import Button from '@material-ui/core/Button';
 
 export default function IncDec() {
   const [num, setNum] = useState(0);
@@ -19,12 +22,13 @@ export default function IncDec() {
         <div className="inc_dec_div">
           <h1>{num}</h1>
           <div className="btn">
-            <button className="inc_dec_btn" onClick={incNum}>
-              Increment
-            </button>
-            <button className="inc_dec_btn" onClick={decNum}>
-              Decrement
-            </button>
+            <Button className="inc_dec_btn" onClick={incNum}>
+              <AddIcon />
+            </Button>
+           
+            <Button className="inc_dec_btn" onClick={decNum}>
+              <RemoveIcon />
+            </Button>
           </div>
         </div>
       </div>

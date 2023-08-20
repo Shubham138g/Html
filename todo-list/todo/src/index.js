@@ -8,8 +8,8 @@ import IncDec from './component/IncDec';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    {/* <IncDec /> */}
+    {/* <App /> */}
+    <IncDec />
   </React.StrictMode>
 );
 
