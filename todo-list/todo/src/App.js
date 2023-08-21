@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import ToDoList from './component/ToDoList';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [inputList, setInputList] = useState("");

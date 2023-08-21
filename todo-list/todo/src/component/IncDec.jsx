@@ -3,6 +3,7 @@ import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import Alert from "@material-ui/core/Alert";
 // import Stack from "@material-ui/core/Stack";
 
@@ -39,6 +40,7 @@ export default function IncDec() {
               >
                 <AddIcon />
               </Button>
+            
             </Tooltip>
             <Tooltip title="Decrement">
               <Button
@@ -51,6 +53,7 @@ export default function IncDec() {
             </Tooltip>
           </div>
         </div>
+       
       </div>
     </>
   );
