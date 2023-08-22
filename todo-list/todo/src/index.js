@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import IncDec from './component/IncDec';
+// import IncDec from './component/IncDec';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <IncDec />
+    <App />
+    {/* <IncDec /> */}
   </React.StrictMode>
 );
 

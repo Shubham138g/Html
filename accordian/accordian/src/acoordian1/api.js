@@ -1,8 +1,8 @@
-export const api_auestion = [
+const api_auestion = [
     {
         id : 1,
-        question : "What is you name.",
-        answer : "My Nmae is Kundan Kumar Sahu.",
+        question : "What is your name.",
+        answer : "My Name is Shubham Gupta.",
     },
     {
         id : 2,
