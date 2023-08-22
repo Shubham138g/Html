@@ -9,7 +9,6 @@ export default function MyAccordian({question,answer}) {
       <h1>{question}</h1>
       </div>
       {
-
       ans && <p className='answer'> {answer}</p>
       }
 
