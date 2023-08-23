@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 
-const CreateNote = () => {
+const CreateNote = (props) => {
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -14,9 +14,14 @@ const CreateNote = () => {
     setNote((preValue) => {
       return {
         ...preValue,
-        [name]:value,
+        [name]: value,
       };
     });
+    console.log(note);
+  };
+
+  const addEvent = (note) => {
+    props.passNote(note);
   };
   return (
     <>
@@ -39,7 +44,7 @@ const CreateNote = () => {
               onChange={inputEvent}
               placeholder="Write your note..."
             ></textarea>
-            <Button>
+            <Button onClick={addEvent}>
               <AddIcon className="plus-sign" />
             </Button>
           </form>
