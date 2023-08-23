@@ -8,6 +8,8 @@ const CreateNote = (props) => {
     content: "",
   });
 
+  const [expand, setExpand] = useState(false);
+
   const inputEvent = (event) => {
     const { name, value } = event.target;
 
@@ -20,22 +22,31 @@ const CreateNote = (props) => {
     console.log(note);
   };
 
-  const addEvent = (note) => {
+  const addEvent = () => {
     props.passNote(note);
+    setNote({
+      title: "",
+      content: "",
+    });
+  };
+  const expandIt = () => {
+    setExpand(true);
   };
   return (
     <>
       <div className="container">
         <div className="main_note">
           <form>
-            <input
-              type="text"
-              name="title"
-              value={note.title}
-              onChange={inputEvent}
-              placeholder="title"
-              autoComplete="off"
-            />
+            {expand ? (
+              <input
+                type="text"
+                name="title"
+                value={note.title}
+                onChange={inputEvent}
+                placeholder="title"
+                autoComplete="off"
+              />
+            ) : null}
             <textarea
               cols=""
               rows=""
@@ -43,10 +54,13 @@ const CreateNote = (props) => {
               value={note.content}
               onChange={inputEvent}
               placeholder="Write your note..."
+              onClick={expandIt}
             ></textarea>
+
+           { expand?
             <Button onClick={addEvent}>
               <AddIcon className="plus-sign" />
-            </Button>
+            </Button>:null}
           </form>
         </div>
       </div>

@@ -15,6 +15,14 @@ function App() {
       return [...preData, note];
     });
     console.log(note);
+  };
+
+  const onDelete=(id)=>{
+    setAddItem((oldData)=>
+    oldData.filter((currData,indx)=>{
+      return indx !==id;
+    })
+    )
 
   };
   return (
@@ -30,6 +38,7 @@ function App() {
             id={index}
             title={val.title}
             content={val.content}
+            deleteItem={onDelete}
           />
         );
       })}
