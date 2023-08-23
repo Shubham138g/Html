@@ -9,7 +9,7 @@ const CreateNote = (props) => {
   });
 
   const [expand, setExpand] = useState(false);
-
+  
   const inputEvent = (event) => {
     const { name, value } = event.target;
 
