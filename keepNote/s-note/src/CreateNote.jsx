@@ -9,7 +9,7 @@ const CreateNote = (props) => {
   });
 
   const [expand, setExpand] = useState(false);
-  
+
   const inputEvent = (event) => {
     const { name, value } = event.target;
 
@@ -32,9 +32,12 @@ const CreateNote = (props) => {
   const expandIt = () => {
     setExpand(true);
   };
+  const btoNormal = () => {
+    setExpand(false);
+  };
   return (
     <>
-      <div className="container">
+      <div className="container" onDoubleClick={btoNormal}>
         <div className="main_note">
           <form>
             {expand ? (
