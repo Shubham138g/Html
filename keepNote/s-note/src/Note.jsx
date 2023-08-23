@@ -9,7 +9,7 @@ const Note = (props) => {
   }
   return (
     <>
-      <div className="container-note">
+      <div className="containerNote">
         <div className="note">
           <h1>{props.title}</h1>
           <br />

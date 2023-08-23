@@ -33,7 +33,8 @@ footer {
   text-align: center;
   position: relative;
   bottom: 0;
-  margin-top: 85vh;
+  height: 47px;
+  margin-top: 55vh;
 }
 
 .container {
@@ -92,13 +93,10 @@ footer {
   color: white;
 }
 
-.container-note{
-  /* display: flex; 
-  flex-wrap: wrap;
-  gap: 20px;  */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the width as needed */
-  gap: 20px; /* Add some space between notes */
+.containerNote{
+  display: flex; 
+  flex-wrap: wrap-reverse;
+  gap: 20px;
 }
 .note{
   height: 200px;
