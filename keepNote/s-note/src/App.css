@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the page takes at least the full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: yellow;
+  color: black;
+}
+.header h1 {
+  font-size: 30px;
+  padding: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.content {
+  flex: 1; /* Allow content to grow and push footer down */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  margin-top: 85vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_note {
+  height: 200px;
+  width: 300px;
+  background-color: transparent;
+  color: whitesmoke;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+.main_note input {
+  border: none;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2px;
+  margin-top: 13px;
+  margin-left: 5px;
+  /* text-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5); */
+}
+.main_note input::placeholder {
+  color: black; /* Your desired placeholder color */
+  font-weight: 500;
+}
+
+.main_note textarea {
+  border: none;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+.main_note textarea::placeholder {
+  color: black; /* Your desired placeholder color */
+  font-weight: 500;
+}
+
+.plus-sign {
+  position: absolute;
+  top: 70px;
+  left: 290px;
+  border: 2px;
+  font-size: large;
+  border: 2px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
+.note{
+  height: 200px;
+  width: 300px;
+  background-color: transparent;
+  color: black;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+}
+.note h1{
+  border: none;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2px;
+  padding-top: 13px;
+  margin-left: 5px;
+}
+.note p{
+  border: none;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.del-sign{
+  position: absolute;
+  top: 95px;
+  left: 288px;
+  border: 2px;
+  font-size: large;
+  border: 2px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
