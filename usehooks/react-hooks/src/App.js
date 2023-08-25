@@ -6,6 +6,8 @@ import Contact from './component/Contact';
 import Error from './component/Error';
 import NavBar from './component/NavBar';
 import User from './component/User';
+import Search from './component/Search';
+
 function App() {
 
   return (
@@ -15,6 +17,7 @@ function App() {
       <Routes>
         <Route exact path='/about' Component={About} />
         <Route path='/contact' Component={Contact} />
+        <Route path='/search' Component={Search} />
         <Route path='/user/:fname/:lname' Component={User} />
         <Route path='*' Component={Error} />
       </Routes>

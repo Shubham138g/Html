@@ -1,12 +1,12 @@
 import React from 'react';
-import { useParams ,useLocation} from 'react-router-dom';
+import { useParams ,useLocation,useNavigate} from 'react-router-dom';
 
 
 
 const User = ({}) => {
     const {fname,lname}= useParams();
     const location =useLocation();
-    
+    const navigate=useNavigate();
    
 
   return (
@@ -15,6 +15,9 @@ const User = ({}) => {
       <p>my URL Location is {location.pathname}</p>
       {
         location.pathname ===`/user/shubham/gupta`?(<button onClick={()=>{alert(`you are awesome`)}}>click me</button>):null
+      }
+      {
+        location.pathname ===`/user/shubham/gupta`?(<button onClick={()=>{navigate(-1)}}>go back</button>):null
       }
      
     </>
