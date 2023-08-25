@@ -1,6 +1,6 @@
 import './App.css';
 // import ComA from './ComA';
-import { Route, Routes} from 'react-router-dom';
+import { Route, Routes,Redirect} from 'react-router-dom';
 import About from './component/About';
 import Contact from './component/Contact';
 import Error from './component/Error';
@@ -20,6 +20,7 @@ function App() {
         <Route path='/search' Component={Search} />
         <Route path='/user/:fname/:lname' Component={User} />
         <Route path='*' Component={Error} />
+        {/* <Redirect to="/user" /> */}
       </Routes>
     </>
   );
