@@ -5,6 +5,7 @@ import About from './component/About';
 import Contact from './component/Contact';
 import Error from './component/Error';
 import NavBar from './component/NavBar';
+import User from './component/User';
 function App() {
 
   return (
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route exact path='/about' Component={About} />
         <Route path='/contact' Component={Contact} />
-        {/* <Route path='*' element ={<Navigate to={Error}/>} /> */}
+        <Route path='/user/:name' Component={User} />
         <Route path='*' Component={Error} />
       </Routes>
     </>

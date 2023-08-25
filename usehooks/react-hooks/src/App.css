@@ -1,4 +1,25 @@
-a.active_class{
-  color: aqua;
-border-bottom: yellow;
+.navBar {
+  background-color: #333; 
+  overflow: hidden;
+}
+
+.navBar a {
+  float: left; /* Make the navigation links appear horizontally */
+  display: block;
+  color: white; /* Text color for the links */
+  text-align: center;
+  padding: 14px 16px; /* Padding around the links */
+  text-decoration: none; /* Remove underlines from the links */
+}
+
+/* Style the navigation links on hover */
+.navBar a:hover {
+  background-color: #ddd; /* Background color on hover */
+  color: black; /* Text color on hover */
+}
+
+/* Style the active link */
+.active_class {
+  background-color: #4CAF50;
+  color: white; 
 }
