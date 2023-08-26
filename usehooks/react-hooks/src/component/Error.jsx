@@ -9,6 +9,8 @@ const Error = () => {
 
       <h1>opps! Page Not Found</h1>
       <button onClick={()=>{navigate("/search")}}>Go Back</button>
+
+      
     </div>
     </>
   );
