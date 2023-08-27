@@ -1,0 +1,11 @@
+.navbar a {
+    text-transform: capitalize;
+}
+
+.navbar{
+
+}
+.navbar a:hover{
+    color: rgb(217, 255, 0);
+    font-size: 17px;
+}
