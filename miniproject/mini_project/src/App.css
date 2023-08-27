@@ -1,11 +1,14 @@
 .navbar a {
     text-transform: capitalize;
+    color: red;
 }
 
-.navbar{
 
-}
 .navbar a:hover{
-    color: rgb(217, 255, 0);
+    color: rgb(0, 42, 255);
     font-size: 17px;
+}
+.menu_active{
+    font-weight: bold;
+    border-bottom:  10px solid black;
 }
