@@ -12,3 +12,16 @@
     font-weight: bold;
     border-bottom:  10px solid black;
 }
+
+.btn-get-started{
+    width: 100px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+ .brand_name{
+    color: red;
+    letter-spacing: 2px;
+ }
