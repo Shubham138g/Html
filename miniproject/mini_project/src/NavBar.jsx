@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <>
-      <div className="container-fluid nav_bg">
+      <div className=" container container-fluid nav_bg">
         <div className="row">
           <div className="col-10 max-auto">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,7 +31,7 @@ const NavBar = () => {
                   <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
                       <NavLink 
-                        className="nav-link active"
+                        className="nav-link "
                         aria-current="page"
                         to="/"
                       >
