@@ -6,7 +6,7 @@ const Header = styled(AppBar)`
   background: #111111;
 `;
 
-const Tabs = styled(NavLink)`
+const Tabs = styled('p')`
   font-size: 16px;
   margin-right: 20px;
   text-decoration: none;
