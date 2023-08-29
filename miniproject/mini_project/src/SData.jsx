@@ -1,4 +1,4 @@
-import card1 from "../src/image/card1.svg";
+// import card1 from "../src/image/card1.svg";
 import card2 from "../src/image/card2.svg";
 import card3 from "../src/image/card3.svg";
 import card4 from "../src/image/card4.svg";
@@ -7,6 +7,7 @@ import card6 from "../src/image/card6.svg";
 import card7 from "../src/image/card7.svg";
 import card8 from "../src/image/card8.svg";
 import card9 from "../src/image/card9.svg";
+import img1 from "../src/image/img1.svg";
 
 
 
@@ -14,7 +15,7 @@ import card9 from "../src/image/card9.svg";
 
 const SData = [
   {
-    imgsrc:{card1},
+    imgsrc:{img1},
     title: "Card1",
   },
   {
