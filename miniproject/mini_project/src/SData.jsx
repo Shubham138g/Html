@@ -15,39 +15,39 @@ import img1 from "../src/image/img1.svg";
 
 const SData = [
   {
-    imgsrc:{img1},
+    imgsrc:img1,
     title: "Card1",
   },
   {
-    imgsrc:{card2},
+    imgsrc:card2,
     title: "Card2",
   },
   {
-    imgsrc:{card3},
+    imgsrc:card3,
     title: "Card3",
   },
   {
-    imgsrc:{card4},
+    imgsrc:card4,
     title: "Card4",
   },
   {
-    imgsrc:{card5},
+    imgsrc:card5,
     title: "Card5",
   },
   {
-    imgsrc:{card6},
+    imgsrc:card6,
     title: "Card6",
   },
   {
-    imgsrc:{card7},
+    imgsrc:card7,
     title: "Card7",
   },
   {
-    imgsrc:{card8},
+    imgsrc:card8,
     title: "Card8",
   },
   {
-    imgsrc:{card9},
+    imgsrc:card9,
     title: "Card9",
   },
 

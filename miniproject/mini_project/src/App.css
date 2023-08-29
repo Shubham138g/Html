@@ -68,3 +68,13 @@
 .animated {
     animation: moveUpDown 3s ease infinite alternate-reverse both; /* 4s duration, ease timing function, and repeat indefinitely */
 }
+
+.custom-card-img {
+    width: 200px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    object-fit: cover; /* This property ensures the image maintains its aspect ratio and covers the entire space */
+  }
+
+  .main_card{
+    box-shadow: 0px 0px 5px 5px rgba(104, 144, 166, 0.692);
+  }
