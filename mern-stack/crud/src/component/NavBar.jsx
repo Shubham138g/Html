@@ -1,12 +1,13 @@
 import React from "react";
-import { AppBar, Toolbar, styled } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
+import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
 const Header = styled(AppBar)`
   background: #111111;
 `;
 
-const Tabs = styled('p')`
+const Tabs = styled(NavLink)`
   font-size: 16px;
   margin-right: 20px;
   text-decoration: none;

@@ -11,12 +11,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-      <NavBar />
       <BrowserRouter >
+        <NavBar />
         <Routes>
           < Route path='/' Component={MStack} />
           < Route path='alluser' Component={AllUser} />
-          < Route path='adduser' Component={ AddUser } />
+          < Route path='adduser' Component={AddUser} />
         </Routes>
       </BrowserRouter>
     </>
