@@ -18,3 +18,11 @@ export const getUser=async()=>{
         console.log("error while calling getUser",error);
     }
 }
+
+export const  getUserr=(id)=>{
+try {
+    return axios.get(`${URL}/${id}`)
+} catch (error) {
+    console.log("error while calling getUserr", error);
+}
+}

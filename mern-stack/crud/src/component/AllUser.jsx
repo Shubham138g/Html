@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect,useState } from 'react';
 import {Button, Table,TableBody,TableCell,TableHead,TableRow,styled} from '@mui/material';
 import { getUser } from '../serivces/api';
+import { Link } from 'react-router-dom';
 
 
 
@@ -38,6 +39,7 @@ const AllUser = () => {
    const getAllUsers= async()=>{
     let response=  await getUser();
     setusers(response.data)
+    console.log(response.data);
   }
   
   return (
@@ -64,7 +66,7 @@ const AllUser = () => {
                 <TableCell>{user.email}</TableCell>
                 <TableCell>{user.phone}</TableCell>
                 <TableCell>
-                  <Button variant='contained' color='secondary' style={{marginRight:10}}>Edit</Button>
+                  <Button variant='contained' color='secondary' style={{marginRight:10}} component={Link} to={`/edit/:${user._id}`}> Edit</Button>
                   <Button variant='contained'>Delete</Button>
                 </TableCell>
               </TBody>
