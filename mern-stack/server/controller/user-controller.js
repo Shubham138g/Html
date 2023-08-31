@@ -25,3 +25,12 @@ try {
     res.status(404).json({message: error.message});
 }
 }
+
+export const getUserr=async(req,res)=>{
+    try {
+        const users= await User.find({_id: req.params.id});
+        res.status(200).json(users)
+      } catch (error) {
+          res.status(404).json({message: error.message});
+      }
+}
