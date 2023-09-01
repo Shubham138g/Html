@@ -39,7 +39,7 @@ const AllUser = () => {
    const getAllUsers= async()=>{
     let response=  await getUser();
     setusers(response.data)
-    console.log(response.data);
+    // console.log(response.data);
   }
   
   return (
@@ -66,7 +66,7 @@ const AllUser = () => {
                 <TableCell>{user.email}</TableCell>
                 <TableCell>{user.phone}</TableCell>
                 <TableCell>
-                  <Button variant='contained' color='secondary' style={{marginRight:10}} component={Link} to={`/edit/:${user._id}`}> Edit</Button>
+                  <Button variant='contained' color='secondary' style={{marginRight:10}} component={Link} to={`/edit/${user._id}`}> Edit</Button>
                   <Button variant='contained'>Delete</Button>
                 </TableCell>
               </TBody>

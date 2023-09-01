@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import {
   FormControl,
@@ -8,8 +8,8 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { addUser, getUserr } from "../serivces/api";
-import {useNavigate} from 'react-router-dom';
+import { editUser, getUserr } from "../serivces/api";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 const Container = styled(FormGroup)`
@@ -30,25 +30,27 @@ const defaultValue = {
 const EditUser = () => {
   const [user, setuser] = useState(defaultValue);
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
-  const {id}= useParams();
+  const { id } = useParams();
 
-  useEffect(()=>{
-loadUserDetails();
-  },[]);
+  useEffect(() => {
+    loadUserDetails();
+  }, []);
 
-  const loadUserDetails= async()=>{
-const response= await getUserr(id);
-  }
+  const loadUserDetails = async () => {
+    const response = await getUserr(id);
+    setuser(response.data);
+    console.log(response.data);
+  };
 
   const onValueChange = (e) => {
     setuser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const addUserDetails = async () => {
-    await addUser(user);
-    navigate("/alluser")
+  const editUserDetails = async () => {
+    // await editUser(user, id);
+    navigate("/alluser");
   };
   return (
     <>
@@ -56,22 +58,38 @@ const response= await getUserr(id);
         <Typography variant="h4">Edit User</Typography>
         <FormControl>
           <InputLabel>Name</InputLabel>
-          <Input name="name" onChange={(e) => onValueChange(e)} />
+          <Input
+            name="name"
+            onChange={(e) => onValueChange(e)}
+            value={user.name}
+          />
         </FormControl>
         <FormControl>
           <InputLabel>Username</InputLabel>
-          <Input name="username" onChange={(e) => onValueChange(e)} />
+          <Input
+            name="username"
+            onChange={(e) => onValueChange(e)}
+            value={user.username}
+          />
         </FormControl>
         <FormControl>
           <InputLabel>Email</InputLabel>
-          <Input name="email" onChange={(e) => onValueChange(e)} />
+          <Input
+            name="email"
+            onChange={(e) => onValueChange(e)}
+            value={user.email}
+          />
         </FormControl>
         <FormControl>
           <InputLabel>Phone</InputLabel>
-          <Input name="phone" onChange={(e) => onValueChange(e)} />
+          <Input
+            name="phone"
+            onChange={(e) => onValueChange(e)}
+            value={user.phone}
+          />
         </FormControl>
         <FormControl>
-          <Button variant="contained" onClick={() => addUserDetails()}>
+          <Button variant="contained" onClick={() => editUserDetails()}>
             Edit User
           </Button>
         </FormControl>
@@ -81,4 +99,3 @@ const response= await getUserr(id);
 };
 
 export default EditUser;
-
