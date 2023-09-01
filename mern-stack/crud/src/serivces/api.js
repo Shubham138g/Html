@@ -11,7 +11,7 @@ export const addUser= async (data)=>{
     }
 }
 
-const id=1;
+
 export const getUser=async()=>{
     try {
         return await axios.get(`${URL}/alluser`)
