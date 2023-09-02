@@ -13,18 +13,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-     <div className="wrapper">
-      <BrowserRouter >
-        <NavBar />
-        <Routes>
-          < Route path='/' Component={MStack} />
-          < Route path='/alluser' Component={AllUser} />
-          < Route path='/adduser' Component={AddUser} />
-          < Route path='/edit/:id' Component={EditUser} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <div className="wrapper">
+
+
+        <BrowserRouter >
+          <NavBar />
+          <Routes>
+            < Route path='/' Component={MStack} />
+            < Route path='/alluser' Component={AllUser} />
+            < Route path='/adduser' Component={AddUser} />
+            < Route path='/edit/:id' Component={EditUser} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+
       </div>
+
+
     </>
   );
 }
