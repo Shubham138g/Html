@@ -40,7 +40,7 @@ const EditUser = () => {
 
   const loadUserDetails = async () => {
     const response = await getUserr(id);
-    setuser(response.data);
+    setuser(response.data[0]);
     console.log(response.data);
   };
 
@@ -49,9 +49,11 @@ const EditUser = () => {
   };
 
   const editUserDetails = async () => {
-    // await editUser(user, id);
+    await editUser(user, id);
     navigate("/alluser");
   };
+
+
   return (
     <>
       <Container>

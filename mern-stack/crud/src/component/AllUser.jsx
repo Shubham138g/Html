@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect,useState } from 'react';
 import {Button, Table,TableBody,TableCell,TableHead,TableRow,styled} from '@mui/material';
-import { getUser } from '../serivces/api';
+import { getUser,deleteUser } from '../serivces/api';
 import { Link } from 'react-router-dom';
 
 
@@ -41,6 +41,12 @@ const AllUser = () => {
     setusers(response.data)
     // console.log(response.data);
   }
+
+  const deleteUserDetail= async(id)=>{
+    await deleteUser(id);
+    getAllUsers();
+    
+  }
   
   return (
     <>
@@ -59,7 +65,7 @@ const AllUser = () => {
         <TableBody>
           {
             users.map(user =>(
-              <TBody>
+              <TBody key={user._id}>
                 <TableCell>{user._id}</TableCell>
                 <TableCell>{user.name}</TableCell>
                 <TableCell>{user.username}</TableCell>
@@ -67,7 +73,7 @@ const AllUser = () => {
                 <TableCell>{user.phone}</TableCell>
                 <TableCell>
                   <Button variant='contained' color='secondary' style={{marginRight:10}} component={Link} to={`/edit/${user._id}`}> Edit</Button>
-                  <Button variant='contained'>Delete</Button>
+                  <Button variant='contained' onClick={()=>deleteUserDetail(user._id)}>Delete</Button>
                 </TableCell>
               </TBody>
             ))

@@ -28,11 +28,21 @@ try {
 }
 }
 
+export const editUser = async (user ,id) => {
+    try{
+      const response = await axios.put(`${URL}/${id}`, user);
+      return response.data;
+    } catch(error){
+      console.log("error while calling editUser function in api.js",error);
+    }
+  }
 
-// export const editUser=()=>{
-//     try {
-//         return axios.post(`${URL}/${id}`,user)
-//     } catch (error) {
-//         console.log("error while calling edituser",error);
-//     }
-// }
+
+export const deleteUser=async(id)=>{
+    try{
+        const response = await axios.delete(`${URL}/${id}`);
+        return response.data;
+      } catch(error){
+        console.log("error while calling deleteUser function in api.js",error);
+      }
+}
