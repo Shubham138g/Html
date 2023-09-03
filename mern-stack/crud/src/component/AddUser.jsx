@@ -28,15 +28,19 @@ const defaultValue = {
 
 const AddUser = () => {
   const [user, setuser] = useState(defaultValue);
+
+
   const navigate=useNavigate();
+
 
   const onValueChange = (e) => {
     setuser({ ...user, [e.target.name]: e.target.value });
   };
+  
 
   const addUserDetails = async () => {
     await addUser(user);
-    navigate("/adduser")
+    navigate("/alluser")
   };
   return (
     <>
@@ -44,19 +48,19 @@ const AddUser = () => {
         <Typography variant="h4">Add User</Typography>
         <FormControl>
           <InputLabel>Name</InputLabel>
-          <Input name="name" onChange={(e) => onValueChange(e)} />
+          <Input name="name"  autoComplete="off" onChange={(e) => onValueChange(e)} />
         </FormControl>
         <FormControl>
           <InputLabel>Username</InputLabel>
-          <Input name="username" onChange={(e) => onValueChange(e)} />
+          <Input name="username"  autoComplete="off"  onChange={(e) => onValueChange(e)} />
         </FormControl>
         <FormControl>
           <InputLabel>Email</InputLabel>
-          <Input name="email" onChange={(e) => onValueChange(e)} />
+          <Input name="email"  autoComplete="off" onChange={(e) => onValueChange(e)} />
         </FormControl>
         <FormControl>
           <InputLabel>Phone</InputLabel>
-          <Input name="phone" onChange={(e) => onValueChange(e)} />
+          <Input name="phone"  autoComplete="off" onChange={(e) => onValueChange(e)} />
         </FormControl>
         <FormControl>
           <Button variant="contained" onClick={() => addUserDetails()}>
