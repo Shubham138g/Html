@@ -7,7 +7,7 @@ const changeTheNumber = (state = intialState, action) => {
             break;
 
         case "DECREMENT":
-            return state - 1;
+            return state - action.payload.num;
             break;
 
         default:
