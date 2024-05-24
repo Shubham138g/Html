@@ -10,7 +10,7 @@ function App() {
       <h1>Incremet and Decrement</h1>
       <a title='decrement' onClick={()=>dispatch(decNumber())} ><span>-</span></a>
       <input type="text" value={myState} />
-      <a title='increment' onClick={()=>dispatch(incNumber())}><span>+</span></a>
+      <a title='increment' onClick={()=>dispatch(incNumber(10))}><span>+</span></a>
     </>
   );
 }
